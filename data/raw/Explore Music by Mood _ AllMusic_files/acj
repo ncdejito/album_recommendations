@@ -1,0 +1,30 @@
+OX_1000838085({
+  "ads":{
+    "chain":1,
+    "medium":"w",
+    "record_tmpl":"http://us-ads.openx.net/{medium}/1.0/{rtype}?ts={txn_state}",
+    "pixels":"http://us-u.openx.net/w/1.0/pd?plm=6&ph=94ef58655625200a8cfc5b15afcd0b94ad52d590",
+    "oxt": 555.892,
+    "adunits" : [
+      {
+        "auid":"537072612",
+        "chain_timeout":"1000",
+        "chain":[
+          {
+            "is_fallback":0,
+            "framed":1,
+            "ad_id":"538170869",
+            "adv_acct_id":"537073401",
+            "width":"970",
+            "height":"250",
+            "html":"<iframe id='f6c5847f' name='f6c5847f' src='http://cas.jp.as.criteo.com/delivery/r/afr.php?did=58d1c226357871ee346c621189d9f9e0&z=AAABWvNeaCR7ktvsbYjMS3FnKGS4O89SAXzXFA&u=%7CRY71YZyQSvlV5zzHAKIhebi2zOBv1yEtlDL%2FWuVmrgI%3D%7C&c1=4z_1vBnVXyU3s5S1ODdcxBEhMh_1PE6dCt88-QtmDLEC2jm0nJL9vjr9akByaItnsokV0cCvyKhhwIoNFvtCdqkZybHjO0cx45SsEo9vUtbEE92cUhx_z9Vetnplc523_n-uZ32mqGKSmP5hxRuWw5tsQLy9SxSw17yK1oVMpMWjxGWvimhoJIV0ps4xyzvZvDojIeee8l4xaRkUWpXKRAFlgZQmmcu3K7thLItkyAfEnuITigu4UY8IcP4R8r0VfdGv2sdSHJ6mbtw5-YEE6CJl4TJ4CXG-OqZhuCQf4t1wmfQBh_vgzmlYQkuuPmvS2LoFEY9-c0upRlgVUr_UfIp4uwuGDHBn' framespacing='0' frameborder='no' scrolling='no' width='970' height='250'></iframe>",
+            "target":"_blank",
+            "ts":"1fHJpZD1hYzQwYzRhMC1lMzg2LTQ5MjYtYTliYS1lOTcxYzQxNDhmN2R8cnQ9MTQ5MDE0MTczNHxhdWlkPTUzNzA3MjYxMnxhdW09RE1JRC5XRUJ8YXVwZj1kaXNwbGF5fHNpZD01MzcwNjMzMTN8cHViPTUzNzA3MTQ4MnxwYz1VU0R8cmFpZD0xNTU5NTgxYi1iNTY5LTQ0ODctYWQ1OS1mNmNkMTQ5NDk0OTl8cnM9MXxjbD0xfGFpZD01MzgxNzA4Njl8dD0xMnxhcz05NzB4MjUwfGxpZD01MzcxMjQxNDR8b2lkPTUzNzEwMTAwNXxwPTUwfHByPTE3fGF0Yj02MHxhZHY9NTM3MDczNDAxfGFjPVVTRHxwbT1QUklDSU5HLkNQTXxtPTF8YWk9MTUyZDA3YjEtZGE0MS00YzQwLWFkMTgtZmU3NGMyNjk1MzRhfG1jPVVTRHxtcj0zM3xwaT0xN3xtdWk9OTBkOGI4NWMtNTdjNy0wNzlkLTk4ZGEtYzAyM2RiYWQ3NDA1fG1hPWFhMWJmYzE2LWVmMTQtNDQ2NS05MTA3LTc0ZDVlMWJhM2QzZnxtcnQ9MTQ5MDE0MTczNHxtcmM9U1JUX1dPTnxtd2E9NTM3MDczNDAxfG13Ymk9NDkzNzF8bXdiPTYwfG1hcD01MHxlbGc9MXxtb2M9VVNEfG1vcj0zM3xtcGM9VVNEfG1wcj0xN3xtcGY9MTB8bW1mPTEwfG1wbmY9MTB8bW1uZj0xMHxwY3Y9MjAxNjEyMjB8bW89T1h8ZWM9NTcyNzYyOHxtcHU9MTd8bWNwPTUwfGFxdD1ydGJ8bXdjPTUzNzEwMTAwNXxtd3A9NTM3MTI0MTQ0fG13Y3I9NTM4MTcwODY5fHJubj0xfG13aXM9MXxtd3B0PW9wZW5ydGJfanNvbnxjaT0xfHVyPXZtRGZXZWpXaUp8bGQ9bWV0cm9kZWFsLmNvbQ",
+            "type":"html",
+            "ad_url":"<iframe id='f6c5847f' name='f6c5847f' src='http://cas.jp.as.criteo.com/delivery/r/afr.php?did=58d1c226357871ee346c621189d9f9e0&z=AAABWvNeaCR7ktvsbYjMS3FnKGS4O89SAXzXFA&u=%7CRY71YZyQSvlV5zzHAKIhebi2zOBv1yEtlDL%2FWuVmrgI%3D%7C&c1=4z_1vBnVXyU3s5S1ODdcxBEhMh_1PE6dCt88-QtmDLEC2jm0nJL9vjr9akByaItnsokV0cCvyKhhwIoNFvtCdqkZybHjO0cx45SsEo9vUtbEE92cUhx_z9Vetnplc523_n-uZ32mqGKSmP5hxRuWw5tsQLy9SxSw17yK1oVMpMWjxGWvimhoJIV0ps4xyzvZvDojIeee8l4xaRkUWpXKRAFlgZQmmcu3K7thLItkyAfEnuITigu4UY8IcP4R8r0VfdGv2sdSHJ6mbtw5-YEE6CJl4TJ4CXG-OqZhuCQf4t1wmfQBh_vgzmlYQkuuPmvS2LoFEY9-c0upRlgVUr_UfIp4uwuGDHBn' framespacing='0' frameborder='no' scrolling='no' width='970' height='250'></iframe>"
+          }
+        ]
+      }
+    ]
+  }
+});

@@ -1,0 +1,33 @@
+
+<!-- saved from url=(0660)http://bcp.crwdcntrl.net/5/c=9979/rand=329373456/pv=y/genp=%23OpR%2374847%23Complex%20%3A%20Non-O%26O%20%3A%20allmusic.com%20%3A%20Site%20Section%20%3A%20moods/seg=%23OpR%2374846%23Complex%20%3A%20Non-O%26O%20%3A%20Total%20Site%20Traffic%20%3A%20allmusic.com/dmn=%23OpR%2374852%23Complex%20%3A%20Non-O%26O%20%3A%20allmusic.com%20%3A%20Referral%20Site%20%3A%20allmusic.com/dmn=%23OpR%2350089%23Hearst%20%3A%20www.allmusic.com%20%3A%20Referral%20Site%20%3A%20www.allmusic.com/dmn=%23OpR%2366487%23Hearst%20%3A%20www.allmusic%3Acom%20%3A%20Referral%20Site%20%3A%20allmusic.com/int=%23OpR%2342464%23Hearst%20%3A%20Total%20Site%20Traffic%20%3A%20allmusic.com/rt=ifr -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"></head><body leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" style="background-color:transparent; width: 100%; text-align: center;">
+<div><img src="./usermatch.gif" width="1" height="1"><script>
+function processTargusData(json)
+{
+   if (json != null) {
+       if (json.targus != null) {
+            u = "";
+            v = "map";
+            if (json.targus.sk != null && json.targus.sk != "") {
+                u += "/tp=TARG/tpid=" + json.targus.sk;
+            }
+            if (json.targus.age != null && json.targus.age != "") {
+                u += "/genp=" + (new Date().getFullYear() - json.targus.age);
+                v = "5";
+            }
+            if (json.targus.gender != null && json.targus.gender != "") {
+                u += "/genp=gender%20-%20" + json.targus.gender;
+                v = "5";
+            }
+            if (u != "") {
+              var img = new Image();
+              img.src = "http://bcp.crwdcntrl.net/" + v + "/c=368" + u;
+              document.body.appendChild(img);
+            }
+        }
+   }
+}
+</script>
+<script src="./g.json"></script><img src="./getdata.xgi" height="1" width="1"></div><img src="./tpid=164221102075001765474">
+
+</body></html>

@@ -1,0 +1,23 @@
+Album recommendation
+Wednesday, February 22, 2017
+10:36 AM
+ 
+- What is cosine similarity? Cosine of the angle between the two vectors
+ 
+Collaborative filtering - predicting tastes (filtering) from other user inputs (collaborative)
+Types of collaborative filtering
+- User based
+Finds similar user as you, recommends items that user likes
+- Item based
+Finds similar items to the ones you liked, based on other user's ratings
+ 
+Flow of talk
+Present allmusic websites
+Present tidy dataset
+Present similarity score
+ 
+Text mining
+Lda viz
+ 
+Facebook scraping
+Pablo Barbera

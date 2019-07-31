@@ -1,0 +1,43 @@
+
+;(function($) {
+    $.fn.allmusicShare = function() {
+        return this.each(function() {
+            var obj   = $(this);
+            //var modal = $('.share-modal', obj);
+            var id    = obj.attr('data-objectid');
+
+            $('.share-button:not(.email)', obj).bind('click', function(e){
+
+                if(!$(this).hasClass('link')) {
+
+                    e.preventDefault();
+                    var width  = 650;
+                    var height = 420;
+                    var top    = parseInt((screen.availHeight/2) - (height/2));
+                    var left   = parseInt((screen.availWidth/2) - (width/2));
+                    var windowFeatures = 'width=' + width + ',height=' + height + ',top='+top+',left='+left+',menubar=no,toolbar=no,scrollbars=no';
+
+                    window.open($(this).attr('href'),'social',windowFeatures);
+                }
+
+            });
+        });
+    }
+})(jQuery);
+
+// init
+$(function(){
+
+    if ($('.allmusic-share').length > 0) {
+        $('.allmusic-share').allmusicShare();
+    }
+
+    if ($('.allmusic-review-share').length > 0) {
+        $('.allmusic-review-share').allmusicShare();
+    }
+
+    if ($('.mobile-review-share').length > 0) {
+        $('.mobile-review-share').allmusicShare();
+    }
+
+});

@@ -1,0 +1,512 @@
+cleaned[cleaned$emo == 63, "album"]
+plot(z)
+hist(z)
+hist(ln(z))
+hist(log(z))
+hist(z)
+hist(log(z))
+hist(log(log(z)))
+hist(log(log(log(z))))
+hist(z[z!=0])
+str(z[z!=0])
+str(z[z>0])
+str(z[z>10])
+hist(z[z!=1])
+hist(log(z))
+load("~/GitHub/personal/album_recommendations/albvsmds.RData")
+View(albvsmds)
+View(cleaned)
+setwd('C:/Users/Niccolo/Documents/GitHub/personal/album_recommendations')
+source <- readLines('Moods - My Beautiful Dark Twisted Fantasy.txt')
+cat(source)
+source
+z <- grepl('/mood/', source)
+hasmood <- source[z]
+hasmood
+moods <- trimws(gsub('.*\\\\\\">', "",
+gsub("</a>.*", "", hasmood[1])
+))
+moods
+'.*\\\\\\">'
+moods <- trimws(gsub('.*\\\\">', "",
+gsub("</a>.*", "", hasmood[1])
+))
+moods
+moods <- trimws(gsub(".*\\\\\\">", "",
+gsub("</a>.*", "", hasmood[1])
+))
+# Extract moods for album
+# Append album with moods to cleaned
+# Find similar albums using cosine similarity
+moods <- trimws(gsub(".*\\\\\">", "",
+gsub("</a>.*", "", hasmood[1])
+))
+moods
+moods <- trimws(gsub('.*\\\\">', "",
+gsub("</a>.*", "", hasmood[1])
+))
+moods <- trimws(gsub('<a.*>', "",
+gsub("</a>.*", "", hasmood[1])
+))
+load("~/GitHub/personal/album_recommendations/albvsmds.RData")
+View(albvsmds)
+View(cleaned)
+moods <- trimws(gsub('<a.*>', "",
+gsub("</a>.*", "", hasmood)
+))
+moods
+data.frame
+?data.frame
+album <- data.frame(moods = moods, count = 1)
+View(album)
+row <- t(album)
+View(row)
+names(row) <- album[1,]
+View(row)
+album[1,]
+names(row) <- row[1,]
+View(row)
+row[1,]
+names(row)
+View(row)
+str(row)
+row <- as.data.frame(t(album))
+View(row)
+?as.data.frame
+row <- as.data.frame(t(album), header = T)
+View(row)
+names(row) <- row[1,]
+View(row)
+row[1,]
+str(row[1,])
+names(row) <- as.character(row[1,])
+View(row)
+as.character(row[1,])
+View(row)
+album[,1]
+as.character(album[,1])
+row <- as.data.frame(t(album), col.names = as.character(album[,1]))
+View(row)
+str(row)
+row <- as.data.frame(unlist(t(album)), col.names = as.character(album[,1]))
+View(row)
+row <- as.data.frame(t(album))
+str(row)
+as.character(row[1,])
+row[1,]
+?levels
+levels(row[1,])
+(row[1,]
+)
+str(row[1,])
+levels(row[1,])
+row <- as.data.frame(t(album), stringsAsFactors = F)
+str(row[1,])
+names(row) <- row[1,]
+View(row)
+row[2,]
+library(dplyr)
+mutate(row, album = "My Beautiful Dark Twisted Fantasy")
+row[2,]
+row <- mutate(row, album = "My Beautiful Dark Twisted Fantasy")
+row[2,]
+row <- row[2,]
+row
+z <- rbind(cleaned, row)
+z <- append(cleaned, row)
+str(z)
+z <- unlist(append(cleaned, row))
+?join
+tcleaned <- as.data.frame(t(cleaned), stringsAsFactors = F)
+View(tcleaned)
+rm(tcleaned)
+View(row)
+library(plyr)
+?rbind.fill
+z <- rbind.fill(cleaned, row)
+View(z)
+?replace
+head(str(z))
+replace(z, is.na(z), 0)
+z <- replace(z, is.na(z), 0)
+str(z)
+View(z)
+r
+row
+str(row)
+row <- as.numeric(row[2,])
+str(row)
+row <- as.data.frame(t(album), stringsAsFactors = F)
+names(row) <- row[1,]
+row <- as.numeric(row[2,])
+row <- mutate(row, album = "My Beautiful Dark Twisted Fantasy")
+row
+View(z)
+which(z$album == "My Beautiful Dark Twisted Fantasy")
+save.image("~/GitHub/personal/album_recommendations/.RData")
+load("C:/Users/Niccolo/Documents/GitHub/personal/album_recommendations/.RData")
+View(album)
+alb_sim = cosine(as.matrix(t(z)))
+library(lsa)
+install.packages("lsa")
+library(lsa)
+alb_sim = cosine(as.matrix(t(z)))
+str(z)
+vv <- as.numeric(z)
+vv <- apply(z, 2, as.numeric())
+vv <- apply(z[,2:290], 2, as.numeric())
+as.matrix(z[,2:290])
+vv <- as.matrix(z[,2:290])
+str(z)
+str(vv)
+str(is.na(z))
+str(z == "0")
+vv <- replace(z, z == "0", 0)
+str(vv)
+str(row)
+str(cleaned)
+?rbind.fill
+library(dplyr)
+?rbind.fill
+library(plyr)
+?rbind.fill
+z <- rbind.fill(cleaned, row)
+row <- as.data.frame(t(album), stringsAsFactors = F)
+names(row) <- row[1,]
+library(dplyr)
+row <- mutate(row, album = "My Beautiful Dark Twisted Fantasy")
+row <- row[2,]
+str(row)
+temp <- row %>% select(-album)
+temp <- as.numeric(temp)
+row[,-c("album")] <- as.numeric(row[,-c("album")])
+row[,-c("album")]
+row[,1:17] <- as.numeric(row[,1:17])
+str(row)
+z <- rbind.fill(cleaned, row)
+z <- replace(z, is.na(z), 0) # replace all NAs with 0
+str(z)
+alb_sim = cosine(as.matrix(t(z)))
+str(z)
+alb_sim = cosine(as.matrix(t(z %>% select(-album))))
+str(t(z))
+str(unlist(t(z)))
+str(z)
+list <- associate(z, "Acerbic", measure = "cosine")
+list <- associate(as.matrix(z[,2:290]), "Acerbic", measure = "cosine")
+td = tempfile()
+dir.create(td)
+write( c("dog", "cat", "mouse"), file=paste(td, "D1", sep="/"))
+write( c("hamster", "mouse", "sushi"), file=paste(td, "D2", sep="/"))
+write( c("dog", "monster", "monster"), file=paste(td, "D3", sep="/"))
+write( c("dog", "mouse", "dog"), file=paste(td, "D4", sep="/"))
+myMatrix = textmatrix(td, minWordLength=1)
+str(myMatrix)
+str(td)
+myLSAspace = lsa(myMatrix, dims=dimcalc_share())
+myNewMatrix = as.textmatrix(myLSAspace)
+associate(myNewMatrix, "mouse")
+td
+?textmatrix
+?textmatrix
+list <- associate(as.matrix(z[,2:290]), "Acerbic", measure = "cosine")
+str(as.matrix(z[,2:290]))
+str(myMatrix)
+View(z)
+alb_sim = cosine(as.matrix(t(z %>% select(-album))))
+library(beepr)
+beep("fanfare")
+View(alb_sim)
+save.image("~/GitHub/personal/album_recommendations/.RData")
+4752*4752
+sim <- alb_sim[4752, 1:4752]
+tail(sim)
+sum(sim > 0)
+View(cleaned)
+sim_score <- cbind(z$album, sim)
+4753*4753
+sim <- alb_sim[4753, 1:4753]
+sum(sim > 0) # 33 albums are similar to Kanye West's album
+sim_score <- cbind(z$album, sim)
+View(sim_score)
+rm(vv)
+save.image("~/GitHub/personal/album_recommendations/.RData")
+View(sim_score)
+dir <- "C:/Users/Niccolo/Documents/GitHub/professional/hsmigration_patterns"
+load(file = paste0(dir,"/aggregate.RData"))
+load(paste0(dir,"/data_vpbFRqvr.rds"))
+vpbFRqvr.df <- readRDS(paste0(dir,"/data_vpbFRqvr.rds"))
+load("~/GitHub/professional/hsmigration_patterns/.RData")
+View(vpbWshs.df)
+View(qvr.df)
+View(data18_escWnames_raw)
+str(escagg.df$Province)
+str(data18_escWnames_raw$Province)
+unique(data18_escWnames_raw$Province)
+saveRDS(qvr.df, paste0(dir,"/data_qvr.rds"))
+saveRDS(vpbWshs.df, paste0(dir,"/data_vpbWshs.rds"))
+vpbWshs.df <- readRDS(paste0(dir,"/data_vpbWshs.rds"))
+qvr.df <- readRDS(paste0(dir,"/data_qvr.rds"))
+data18_escWnames_raw <- readRDS(paste0(dir,"/data18_escWnames_raw.rds"))
+dir <- "C:/Users/Niccolo/Documents/GitHub/professional/hsmigration_patterns"
+vpbWshs.df <- readRDS(paste0(dir,"/data_vpbWshs.rds"))
+qvr.df <- readRDS(paste0(dir,"/data_qvr.rds"))
+data18_escWnames_raw <- readRDS(paste0(dir,"/data18_escWnames_raw.rds"))
+View(vpbWshs.df)
+str(qvr.df)
+unique(qvr.df$Region)
+unique(vpbWshs.df$Region.x)
+unique(vpbWshs.df$Region.y)
+str(data18_escWnames_raw)
+install.packages("readxl")
+library(readxl)
+?readxl
+?read_excel
+library(dplyr)
+escprovtoreg <- read_excel(paste0(dir,"/Province to Region.xlsx"), sheet = 1)
+str(escprovtoreg)
+names(escprovtoreg)
+mappedesc <- data18_escWnames_raw %>% left_join(escprovtoreg)
+str(mappedesc)
+vpbmiggrp.df <- vpbWshs.df %>%
+group_by(Region.y, `QVR Type`, `School Type`) %>%
+summarise(Count = n())
+View(vpbmiggrp.df)
+vpbmiggrp.df <- vpbWshs.df %>%
+group_by(Region.x, `QVR Type`, `School Type`) %>%
+summarise(Count = n())
+View(vpbmiggrp.df)
+View(escprovtoreg)
+qvragg.df <- qvr.df %>%
+group_by(Region, `QVR Type`, `School Type`) %>%
+summarise(Count = n())
+View(qvragg.df)
+escagg.df <- mappedesc %>%
+group_by(Region) %>%
+summarise(Count = n())
+View(escagg.df)
+save(vpbmiggrp.df, qvragg.df, escagg.df, file = paste0(dir,"/aggregate.RData"))
+View(vpbmiggrp.df)
+unique(vpbmiggrp.df$`School Type`)
+table(vpbmiggrp.df$`School Type`)
+?summarise
+vpbagg.df <- vpbmiggrp.df %>%
+group_by(Region.x, `QVR Type`) %>%
+summarise(Sum = sum(Count))
+View(vpbagg.df)
+View(qvr.df)
+View(qvragg.df)
+str(qvragg.df)
+qvraggII.df <- qvragg.df %>%
+group_by(Region) %>%
+summarise(Sum = sum(Count))
+View(qvraggII.df)
+str(escagg.df)
+?read_excel
+enrol.df <- read_excel(paste0(dir,"/VP Migration Study Data Roadmap.xlsx"), sheet = "Donald")
+View(enrol.df)
+str(enrol[,1:5])
+str(enrol.df[,1:5])
+g11enrol.df <- enrol.df[,1:5]
+names(g11enrol.df) <- c("reg.or.div", "region", "enrol.type", "agg", "count")
+str(enrol.df[,1:5])
+str(g11enrol.df)
+g11enrol.df <- g11enrol.df %>%
+filter(reg.or.div = "Regional") %>%
+select(region, count)
+g11enrol.df <- g11enrol.df %>%
+filter(reg.or.div == "Regional") %>%
+select(region, count)
+View(g11enrol.df)
+names(g10enrol.df) <- c("reg.or.div", "region", "enrol.type", "agg", "count")
+g10enrol.df <- enrol.df[,11:15]
+names(g10enrol.df) <- c("reg.or.div", "region", "enrol.type", "agg", "count")
+g10enrol.df <- g10enrol.df %>%
+filter(reg.or.div == "Regional") %>%
+select(region, count)
+str(g10enrol.df)
+g10enrol.df <- enrol.df[,11:15]
+names(g10enrol.df) <- c("reg.or.div", "region", "enrol.type", "agg", "count")
+str(g10enrol.df)
+unique(g10enrol.df$enrol.type)
+pub10.df <- g10enrol.df %>%
+filter(reg.or.div == "Regional",
+enrol.type == "Pub Gr 10 Enrol") %>%
+select(region, count)
+pubg11.df <- g11enrol.df %>%
+filter(reg.or.div == "Regional",
+enrol.type == "Pub Gr 11 Enrol") %>%
+select(region, count)
+g11enrol.df <- enrol.df[,1:5]
+names(g11enrol.df) <- c("reg.or.div", "region", "enrol.type", "agg", "count")
+pubg11.df <- g11enrol.df %>%
+filter(reg.or.div == "Regional",
+enrol.type == "Pub Gr 11 Enrol") %>%
+select(region, count)
+View(pubenrol.df)
+pubenrol.df <- full_join(pub10.df, pub11.df)
+rm(pub10.df)
+pubg10.df <- g10enrol.df %>%
+filter(reg.or.div == "Regional",
+enrol.type == "Pub Gr 10 Enrol") %>%
+select(region, count)
+pubenrol.df <- full_join(pubg10.df, pubg11.df)
+View(pubenrol.df)
+View(pubenrol.df)
+pubenrol.df <- full_join(pubg10.df, pubg11.df, by = "region")
+View(pubenrol.df)
+unique(pubg11.df$region)
+unique(pubg10.df$region)
+View(cbind(pubg10.df$region, pubg11.df$region))
+c(pubg11.df[1:4,1], pubg11.df[6:len(pubg11.df$region),1])
+len(pubg11.df$region)
+c(pubg11.df[1:4,1], pubg11.df[6:length(pubg11.df$region),1])
+str(pubg10.df$region)
+unique(pubg10.df$region)
+negg10.df <- g10enrol.df %>%
+filter(reg.or.div == "Division") %>%
+select(region, count)
+View(negg10.df)
+?or
+negg10.df <- g10enrol.df %>%
+filter(reg.or.div == "Division",
+region == "Negros Occidental" |
+region == "Negros Oriental") %>%
+select(region, count)
+View(negg10.df)
+sum(g10enrol.df %>%
+filter(reg.or.div == "Division",
+region == "Negros Occidental" |
+region == "Negros Oriental") %>%
+select(region, count)[,2])
+sum(negg10.df$count)
+View(pubg10.df)
+data.frame(region = "NIR", count = 30001)
+View(union(pubg10.df, data.frame(region = "NIR", count = 30001)))
+str(pubg10.df)
+View(negg10.df)
+View(pubg10.df)
+pubg10.df <- union(pubg10.df, data.frame(region = "NIR", count = 30001))
+View(pubg10.df)
+str(pubg10.df %>%
+filter(region == "Region 6"))
+pubg10.df %>%
+filter(region == "Region 6") %>%
+select(count)
+?grep
+grep("Region 6", pubg10.df$region)
+grep("Region 7", pubg10.df$region)
+pubg10.df[9, 2]
+pubg10.df[9, 2] - 19570
+pubg10.df[4, 2] - 10431
+pubg10.df[4, 2]
+pubg10.df[9, 2] <- pubg10.df[9, 2] - 19570
+View(pubg10.df)
+pubg10.df[4, 2] <- pubg10.df[4, 2] - 10431
+View(cbind(pubg11.df$region, pubg10.df$region))
+View(cbind(sort(pubg11.df$region), sort(pubg10.df$region)))
+region <- read_excel(paste0(dir,"/VP Migration Study Data Roadmap.xlsx"), sheet = 3)
+View(region)
+region <- read_excel(paste0(dir,"/Province to Region.xlsx"), sheet = 3)
+View(region)
+names(region)
+names(region)[2] <- "region"
+pubg10.df %>% left_join(region, by = region)
+str(region)
+rm(region)
+map.region <- read_excel(paste0(dir,"/Province to Region.xlsx"), sheet = 3)
+names(map.region)[2] <- "region"
+pubg10.df %>% left_join(map.region, by = region)
+View(map.region)
+View(pubg10.df)
+pubg10.df %>% left_join(map.region)
+str(pubg10.df %>% left_join(map.region))
+pubg10.df <- pubg10.df %>% left_join(map.region)
+names(pubg10.df)
+names(pubg10.df) <- c("g10.region", "count", "region")
+pubenrol.df <- full_join(pubg10.df, pubg11.df, by = "region")
+View(pubenrol.df)
+names(pubenrol.df)
+names(pubenrol.df)[2] <- "g10.enrol"
+names(pubenrol.df)[4] <- "g11.enrol"
+names(pubenrol.df)
+z <- pubenrol.df %>%
+select(region, g10.enrol, g11.enrol)
+str(z)
+View(z)
+pubenrol.df <- pubenrol.df %>%
+select(region, g10.enrol, g11.enrol)
+rm(z)
+str(g10enrol.df$enrol.type)
+unique(g10enrol.df$enrol.type)
+View(pubg10.df)
+View(vpbmiggrp.df)
+View(vpbmiggrp.df)
+View(qvragg.df)
+View(pubg11.df)
+View(pubg10.df)
+View(pubenrol.df)
+pubenrol.df %>%
+mutate(transition_rate = g11.enrolment / g10.enrolment) %>%
+View()
+pubenrol.df %>%
+mutate(transition_rate = g11.enrol / g10.enrol) %>%
+View()
+View(pubg10.df)
+View(pubg11.df)
+adjustment <- pubenrol.df %>%
+mutate(transition_rate = g11.enrol / g10.enrol)
+adjustment[6, 4] <- 1
+View(adjustment)
+View(vpbWshs.df)
+View(vpbmiggrp.df)
+View(escagg.df)
+View(vpbagg.df)
+View(vpbagg.df)
+View(enrol.df)
+View(vpbmiggrp.df)
+escdonald <- enrol.df[,6:10]
+View(escdonald)
+View(escdonald)
+names(escdonald) <- c("reg.or.div", "region", "enrol.type", "agg", "count")
+prig10.df <- escdonald %>%
+filter(reg.or.div == "Regional") %>%
+select(region, count)
+View(prig10.df)
+View(vpbmiggrp.df)
+View(pubenrol.df)
+View(adjustment)
+saveRDS(vpbagg.df, paste0(dir, "/ETL/II Transformations/vpbagg.df"))
+saveRDS(vpbagg.df, paste0(dir, "/ETL/II Transformations/vpbagg.rds"))
+saveRDS(qvraggII.df, paste0(dir, "/ETL/II Transformations/qvraggII.rds"))
+saveRDS(escagg.df, paste0(dir, "/ETL/II Transformations/escagg.rds"))
+saveRDS(pubenrol.df, paste0(dir, "/ETL/II Transformations/pubenrol.rds"))
+saveRDS(vpbmiggrp.df, paste0(dir, "/ETL/IV Master/vpbmiggrp.rds"))
+saveRDS(escprovtoreg, paste0(dir, "/ETL/keys/escprovtoreg"))
+saveRDS(map.region, paste0(dir, "/ETL/keys/map.region"))
+saveRDS(escprovtoreg, paste0(dir, "/ETL/keys/escprovtoreg.rds"))
+saveRDS(map.region, paste0(dir, "/ETL/keys/map_region.rds"))
+saveRDS(vpbmiggrp.df, paste0(dir, "/ETL/IV Master/vpbmiggrp.rds"))
+saveRDS(adjustment, paste0(dir, "/ETL/pubtrans.rds"))
+save.image("~/GitHub/professional/hsmigration_patterns/.RData")
+load("~/GitHub/personal/opinion_on_duterte/.RData")
+load("~/Work life/Deliberate practice/album_recommendations/.RData")
+moods
+View(albvsmds)
+View(alb_sim)
+View(z)
+View(sim_score)
+load("C:/Users/Niccolo/Documents/Work life/Deliberate practice/album_recommendations/.RData")
+View(albvsmds)
+View(cleaned)
+View(alb_sim)
+View(sim_score)
+View(albvsmds)
+View(cleaned)
+?cosine
+View(album)
+View(sim_score)
+load("~/Work life/Deliberate practice/album_recommendations/.RData")
+View(alb_sim)
+View(sim_score)
+write.csv(sim_score, "C:/Users/Niccolo/Documents/Work life/Deliberate practice/album_recommendations/simscore.csv")

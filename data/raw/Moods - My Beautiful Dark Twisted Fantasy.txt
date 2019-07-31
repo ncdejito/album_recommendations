@@ -1,0 +1,37 @@
+<section  class="moods">
+        <h4>Album Moods</h4>
+        <div>
+                            <span class="mood">
+                    <a href="http://www.allmusic.com/mood/ambitious-xa0000000933">Ambitious</a>                </span>
+                            <span class="mood">
+                    <a href="http://www.allmusic.com/mood/cartoonish-xa0000000957">Cartoonish</a>                </span>
+                            <span class="mood">
+                    <a href="http://www.allmusic.com/mood/flashy-xa0000001003">Flashy</a>                </span>
+                            <span class="mood">
+                    <a href="http://www.allmusic.com/mood/messy-xa0000001046">Messy</a>                </span>
+                            <span class="mood">
+                    <a href="http://www.allmusic.com/mood/nervous-jittery-xa0000000741">Nervous/Jittery</a>                </span>
+                            <span class="mood">
+                    <a href="http://www.allmusic.com/mood/provocative-xa0000001070">Provocative</a>                </span>
+                            <span class="mood">
+                    <a href="http://www.allmusic.com/mood/self-conscious-xa0000001089">Self-Conscious</a>                </span>
+                            <span class="mood">
+                    <a href="http://www.allmusic.com/mood/striding-xa0000000771">Striding</a>                </span>
+                            <span class="mood">
+                    <a href="http://www.allmusic.com/mood/bombastic-xa0000000948">Bombastic</a>                </span>
+                            <span class="mood">
+                    <a href="http://www.allmusic.com/mood/brash-xa0000000949">Brash</a>                </span>
+                            <span class="mood">
+                    <a href="http://www.allmusic.com/mood/cerebral-xa0000000959">Cerebral</a>                </span>
+                            <span class="mood">
+                    <a href="http://www.allmusic.com/mood/confrontational-xa0000000966">Confrontational</a>                </span>
+                            <span class="mood">
+                    <a href="http://www.allmusic.com/mood/energetic-xa0000000990">Energetic</a>                </span>
+                            <span class="mood">
+                    <a href="http://www.allmusic.com/mood/gutsy-xa0000001015">Gutsy</a>                </span>
+                            <span class="mood">
+                    <a href="http://www.allmusic.com/mood/strong-xa0000000772">Strong</a>                </span>
+                            <span class="mood">
+                    <a href="http://www.allmusic.com/mood/explosive-xa0000000700">Explosive</a>                </span>
+                            <span class="mood">
+                    <a href="http://www.allmusic.com/mood/extroverted-xa0000000996">Extroverted</a>                </span>
